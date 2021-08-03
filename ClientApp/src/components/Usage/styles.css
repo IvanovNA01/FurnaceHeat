@@ -1,0 +1,122 @@
+.usage-wrapper {
+	display: flex;
+	flex-flow: row nowrap;
+	width: 60%;
+	position: relative;
+}
+
+/*.usage-table::before {
+	content: "СТАТИСТИКА ОБРАЩЕНИЙ К СЕРВЕРУ";
+	color: darkorange;
+	font-size: smaller;
+	position: absolute;
+	right: 0px;
+	margin-top: -1.2rem;
+	padding-left: 2rem;
+	border-bottom: 1px solid darkorange;
+}*/
+
+.input-group-append button {
+	width: 100px !important;
+}
+
+.usage-table {
+	position: relative;
+	margin-left: 1rem;
+	font-size: 14px;
+	transition: opacity .7s ease-in-out;
+}
+
+.table-visible {
+	opacity: 1;
+}
+
+.table-hidden {
+	opacity: 0;
+}
+
+.usage-table thead th {
+	font-weight: normal;
+	font-size: 12px;
+	color: darkorange;
+	border-top: unset !important;
+	border-bottom: 1px solid darkorange !important;
+}
+
+.usage-table thead th:nth-child(1), .usage-table thead th:nth-child(2), .usage-table thead th:nth-child(3), .usage-table thead th:nth-child(4) {
+	cursor: pointer;
+}
+
+.usage-table thead th:nth-child(1):hover, .usage-table thead th:nth-child(2):hover, .usage-table thead th:nth-child(3):hover, .usage-table thead th:nth-child(4):hover {
+	background-color: rgb(0, 0, 0, 0.012);
+	text-shadow: 0 0 5px wheat;
+}
+
+th span {
+	margin-left: .5rem;
+	background-color: rgba(255, 140, 0, 0.63) !important;
+	font-size: .7rem !important;
+	font-weight: 500 !important;
+	color: white;
+}
+
+.usage-table thead, .usage-table tbody tr {
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+}
+
+.usage-table tbody {
+	display: block;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	max-height: 78vh;
+}
+
+.usage-table td {
+	padding-right: 0.2rem;
+	overflow: hidden;
+}
+
+.shaded {
+	background-color: rgba(245, 245, 245, 0.37);
+}
+
+.accent {
+	color: darkorange;
+}
+
+.bg-caution {
+	color: red;
+	background-color: rgba(255, 255, 0, 0.068)
+}
+
+.usage-btn {
+	width: 100px;
+	border-top-left-radius: unset !important;
+	border-bottom-left-radius: unset !important;
+	margin-top: .5rem;
+	float: right;
+}
+
+.badge-asc::after {
+	content: "";
+	position: absolute;
+	height: 0;
+	width: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 10px solid darkorange;
+	margin-left: 10px;
+}
+
+.badge-desc::after {
+	content: "";
+	position: absolute;
+	height: 0;
+	width: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-bottom: 10px solid darkorange;
+	margin-left: 10px;
+}

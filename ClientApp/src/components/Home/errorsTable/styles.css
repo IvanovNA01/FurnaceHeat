@@ -1,0 +1,12 @@
+.danger {
+	color: #dc3545;
+}
+
+.non-active-error {
+	color: gray;
+	font-weight: 300;
+}
+
+.active-error {
+	color: #dc3545;
+}

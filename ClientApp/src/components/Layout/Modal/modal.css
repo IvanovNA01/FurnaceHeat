@@ -1,0 +1,36 @@
+.modal-title {
+	color: gray;
+	text-transform: uppercase;
+	font-weight: 300;
+}
+
+.modal-footer button:hover {
+	box-shadow: 0 0 5px lightblue;
+	background-color: #257fd8;
+}
+
+.modal-body {
+	font-weight: 400;
+}
+
+.modal-text-content ul {
+	padding-left: 0;
+	font-weight: 600;
+}
+
+.modal-text-content li {
+	margin-left: 1.4rem;
+	font-weight: 400;
+}
+
+.modal-text-content .release {
+	color: darkorange;
+}
+
+.modal-text-img {
+	background-image: url("./22-06-2021.gif");
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: 168px;
+	width: auto;
+}

@@ -1,0 +1,262 @@
+.custom-switch {
+	position: absolute !important;
+	top: 10px;
+	left: 20px;
+}
+
+.fitter {
+	padding: 28px 28px;
+	margin-left: 67px;
+	position: absolute;
+	height: 100%;
+	width: 700px;
+	/* border: 1px solid red; */
+}
+
+.wrapper {
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	/* border: 1px solid gray; */
+	height: 100%;
+	transition: 0.5s all;
+}
+
+#chartdiv {
+	height: 800px;
+	width: 835px;
+	/* min-height: 800px; */
+	/* min-width: 840px; */
+	/* border: 1px solid black; */
+}
+
+.v-fitter {
+	padding: 33px 0 50px 0px;
+	margin-left: 35px;
+	position: absolute;
+	top: 0;
+	height: 800px;
+	width: 800px;
+	/*border: 1px solid red;*/
+}
+
+.v-wrapper {
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 100%;
+	transition: 0.5s all;
+	/* border: 1px solid gray; */
+}
+
+#v-chartdiv {
+	height: 800px;
+	width: 503px;
+	padding-top: 25px;
+	margin-left: 32px;
+	/* border: 1px solid green; */
+}
+
+canvas {
+	position: absolute;
+	top: 15px;
+	left: 530px;
+	z-index: 1;
+}
+
+#radial-canvas {
+	position: absolute;
+	top: 0px;
+	left: 640px;
+	z-index: 1;
+	/*border: 1px solid magenta;*/
+}
+
+.h3 {
+	background-image: url("./radialChart/backgrounds/h3.gif");
+}
+
+.h4 {
+	background-image: url("./radialChart/backgrounds/h4.gif");
+}
+
+.h5 {
+	background-image: url("./radialChart/backgrounds/h5.gif");
+}
+
+.h6 {
+	background-image: url("./radialChart/backgrounds/h6.gif");
+}
+
+.h7 {
+	background-image: url("./radialChart/backgrounds/h7.gif");
+}
+
+.h8 {
+	background-image: url("./radialChart/backgrounds/h8.gif");
+}
+
+.h9 {
+	background-image: url("./radialChart/backgrounds/h9.gif");
+}
+
+.h10 {
+	background-image: url("./radialChart/backgrounds/h10.gif");
+}
+
+.h11 {
+	background-image: url("./radialChart/backgrounds/h11.gif");
+}
+
+.h12 {
+	background-image: url("./radialChart/backgrounds/h12.gif");
+}
+
+.v1-2-4-30-32 {
+	background-image: url("./verticalChart/backgrounds/v1-2-4-30-32.gif");
+}
+
+.v3-31 {
+	background-image: url("./verticalChart/backgrounds/v3-31.gif");
+}
+
+.v5-29 {
+	background-image: url("./verticalChart/backgrounds/v5-29.gif");
+}
+
+.v6-28 {
+	background-image: url("./verticalChart/backgrounds/v6-28.gif");
+}
+
+.card {
+	max-height: 550px;
+}
+
+.card-header .nav-item {
+	width: 50%;
+}
+
+.card-body {
+	padding: 0 10px 15px 10px !important;
+}
+
+.radio-wrapper {
+	border: 1px solid rgba(0, 0, 0, .125);
+	border-top: unset;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	max-height: 450px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	padding: 25px !important;
+}
+
+.date-group {
+	transition: all .5s ease-in;
+	display: flex;
+}
+
+.toast-wrapper {
+	position: absolute;
+	right: 1.5rem;
+	margin-top: .5rem;
+	z-index: 1;
+}
+
+.toast-bring-back {
+	position: absolute;
+	right: 1.5rem;
+	margin-top: 1rem;
+	color: lightgray;
+	z-index: 0;
+	width: max-content;
+	cursor: pointer;
+}
+
+.toast-main {
+	width: 400px;
+	max-width: 400px !important;
+	transition: .4s all;
+}
+
+.malfunctions-header {
+	cursor: pointer;
+	background-color: rgba(255, 123, 0, 0.03) !important;
+}
+
+.toast-body {
+	/* display: flex;
+	flex-direction: column; */
+	background-color: white;
+	transition: .4s all;
+	color: gray;
+	overflow: hidden;
+	font-size: .8rem;
+}
+
+.toast-body-hidden {
+	display: flex;
+	overflow: hidden;
+	transition: all .4s;
+	padding: 0 !important;
+	height: 0;
+}
+
+.toast-body table thead tr th {
+	border-top: unset;
+	color: gray;
+	font-weight: 400;
+	text-transform: uppercase;
+	font-size: smaller;
+}
+
+.toast-body table {
+	margin-bottom: 0;
+}
+
+.toast-body table tbody {
+	display: block;
+	max-height: 520px !important;
+	overflow-y: scroll !important;
+}
+
+.toast-body table thead, .toast-body table tbody tr {
+	display: block;
+	display: table !important;
+	width: 100% !important;
+	table-layout: fixed !important;
+}
+
+@media (max-height: 900px) {
+	#chartdiv {
+		height: 650px;
+		width: 735px;
+	}
+	.fitter {
+		padding: 63px 63px;
+		margin-left: 42px;
+		width: 650px;
+	}
+	#v-chartdiv {
+		padding-top: 23px;
+		height: 655px;
+		width: 417px;
+	}
+	.v-fitter {
+		margin-left: 39px;
+		width: 655px;
+		height: 655px;
+		/* border: 1px solid red; */
+	}
+	canvas {
+		left: 430px;
+		top: 2px;
+	}
+	#radial-canvas {
+		left: 550px;
+	}
+	.toast-main {
+		width: 350px;
+	}
+}

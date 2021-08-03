@@ -1,0 +1,97 @@
+.table-visible {
+	opacity: 1;
+	transition: 1s all;
+}
+
+.table-invisible {
+	opacity: 0;
+	transition: 1s all;
+}
+
+.last-hour-wrapper {
+	position: absolute;
+	right: 1.5rem;
+	margin-top: 3.2rem;
+}
+
+.last-hour-table {
+	position: absolute;
+	right: 1.6rem;
+	margin-top: 8rem;
+	width: 350px !important;
+	font-size: 14px;
+	color: gray !important;
+	border-top: 1px solid darkorange;
+}
+
+.last-hour-table::before {
+	content: "Температуры";
+	color: darkorange;
+	font-size: .7rem;
+	position: absolute;
+	top: -1.1rem;
+	right: 0;
+	text-transform: uppercase;
+}
+
+.last-hour-table th {
+	font-weight: normal;
+	font-size: .7rem;
+	color: rgba(128, 128, 128, 0.658);
+	border-top: unset !important;
+}
+
+.last-hour-table thead, .last-hour-table tbody tr {
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+}
+
+.last-hour-table tbody {
+	display: block;
+	overflow: auto;
+	max-height: 550px;
+}
+
+.last-hour-table tbody tr.text-warning {
+	color: darkgoldenrod !important;
+	background-color: rgba(255, 255, 0, 0.103);
+}
+
+.shaded-cell {
+	background-color: rgba(245, 245, 245, 0.432);
+}
+
+.warning-header {
+	cursor: pointer;
+	background-color: rgba(255, 252, 89, 0.151) !important;
+	color: darkgoldenrod !important;
+}
+
+.warning-body {
+	font-size: .9rem !important;
+	color: darkgoldenrod !important;
+}
+
+.toast-warning {
+	width: 380px;
+	max-width: 380px !important;
+	transition: .4s all;
+}
+
+@media (max-height: 900px) {
+	.last-hour-table {
+		width: 300px !important;
+		font-size: 12px;
+		margin-top: 7rem;
+	}
+	.last-hour-table tbody {
+		max-height: 460px;
+	}
+	.warning-body {
+		font-size: .8rem !important;
+	}
+	.toast-warning {
+		width: 330px;
+	}
+}

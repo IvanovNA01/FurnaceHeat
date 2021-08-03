@@ -1,0 +1,51 @@
+{
+	"name": "furnaceheat",
+	"version": "0.1.0",
+	"private": true,
+	"dependencies": {
+		"@amcharts/amcharts4": "^4.9.30",
+		"@amcharts/amcharts4-fonts": "^4.0.1",
+		"abortcontroller-polyfill": "^1.7.1",
+		"bootstrap": "^4.5.2",
+		"core-js": "^3.6.5",
+		"es6-promise": "^4.2.8",
+		"isomorphic-fetch": "^3.0.0",
+		"jquery": "3.6.0",
+		"merge": "^2.1.1",
+		"moment": "^2.27.0",
+		"moment-range": "^4.0.2",
+		"oidc-client": "^1.9.0",
+		"promise-polyfill": "^8.2.0",
+		"react": "^16.13.1",
+		"react-bootstrap": "^1.3.0",
+		"react-dom": "^16.13.1",
+		"react-router-bootstrap": "^0.25.0",
+		"react-router-dom": "^5.2.0",
+		"react-scripts": "^4.0.3",
+		"reactstrap": "^8.5.1",
+		"rimraf": "^2.6.2"
+	},
+	"devDependencies": {
+		"ajv": "^6.12.3",
+		"cross-env": "^5.2.0",
+		"typescript": "^3.9.7"
+	},
+	"scripts": {
+		"start": "rimraf ./build && react-scripts start",
+		"build": "react-scripts build",
+		"test": "cross-env CI=true react-scripts test --env=jsdom",
+		"eject": "react-scripts eject"
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	}
+}

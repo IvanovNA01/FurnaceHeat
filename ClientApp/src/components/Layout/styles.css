@@ -1,0 +1,53 @@
+﻿a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.box-shadow {
+  box-shadow: 0 0 40px lightgray;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar {
+	padding: 0 !important;
+}
+
+.title {
+	padding: 7px 0 0 0;
+	margin-left: 15vw;
+	text-transform: uppercase;
+	font-weight: 400;
+	font-size: large;
+}
+
+.active {
+	color: darkorange !important;
+}
+
+.app-footer {
+	position: absolute;
+	display: flex;
+	justify-content: space-between;
+	font-size: xx-small;
+	bottom: 1rem;
+	right: 1rem;
+}
+
+.app-footer a, .app-footer span {
+	margin-left: 1rem;
+	color: gray;
+}
