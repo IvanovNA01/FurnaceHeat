@@ -1,0 +1,28 @@
+Dim Xs, Ys 'средние значения Х и У
+Dim XYs 'среднее произведений Х на У
+Dim disp 'дисперсия
+ 
+Dim summX, summY, summ XY, summDisp
+summX=0
+summY=0
+summ XY=0
+For count=1 to i
+  summX = summX + X(i)
+  summY = summY + Y(i)
+  summXY = summXY + X(i)*Y(i)
+Next count
+ 
+Xs = summX/i
+Ys = summY/i
+XYs = summXY/i
+ 
+summDisp=0
+For count=1 to i
+  summDisp = summDisp + (X(i) - Xs)^2
+Next count
+disp = summDisp/i
+ 
+B = (XYs - Ys * Xs) / disp
+A = Ys - B*Xs
+
+затем строим график линии тренда у=Вх+А
