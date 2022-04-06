@@ -7,7 +7,7 @@ window.cookieOffset = 1800	// 30 min
 
 window.usageProtection = false
 window.usagePassword = "energo"
-window.usageIpExclude = ["10.2.10.23", "::1", "127.0.0.1"]
+window.usageIpExclude = ["10.2.10.75", "::1", "127.0.0.1"]
 
 
 window.updatesInterval = 61

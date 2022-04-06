@@ -257,6 +257,7 @@ export class Home extends Component {
 			}
 			catch (err) {
 				console.error(err)
+				hideLoading()
 				error = true
 				timer && (timer.innerText = `Ошибка в полученных данных...`)
 				return
@@ -324,7 +325,8 @@ export class Home extends Component {
 				</div>
 				<div className="devider"></div>
 				<div className="d-flex" id="chartfield">
-					{this.state.chartData && this.state.date === moment().toISOString(true).slice(0, 10) &&
+					{/* {this.state.chartData && this.state.date === moment().toISOString(true).slice(0, 10) && */}
+					{this.state.chartData && this.state.autoUpdate &&
 						<AutoUpdate onClick={this.autoClick} checked={this.state.autoUpdate} />}
 					{this.state.chartData && (this.state.chartType === "radial"
 						? <RadialChart chartData={this.state.chartData} date={this.state.date} />

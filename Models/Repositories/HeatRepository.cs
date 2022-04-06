@@ -26,19 +26,17 @@ namespace FurnaceHeat.Models.Repositories
 		public async Task<Dictionary<string, List<Sensor>>> Instant()
 		{
 			string stmt = @"SELECT
-												o.TagComment [name],
-												m.VarValue val,
-												sh.VarValue prevVal
-											FROM ShortHistory sh
-												JOIN Settings_OPCTagsList o
-												ON o.TagName LIKE '%T_Futerovki%'
-													AND o.Tag_ID=sh.TagId
-													AND sh.HH=DATEPART(HOUR, GETDATE())-1
-													AND DATEPART(MINUTE, sh.[DateTime])=0
-													AND FORMAT(sh.[DateTime], 'yyyy-MM-dd') = FORMAT(GETDATE(), 'yyyy-MM-dd')
-												JOIN Minuta m
-												ON m.VarName LIKE '%T_Futerovki%'
-													AND m.VarName=o.TagName
+													o.TagComment [name],
+													max(m.VarValue) val,
+													avg(sh.VarValue) prevVal
+											FROM dbo.ShortHistory sh
+													JOIN Settings_OPCTagsList o ON o.TagName LIKE '%T_Futerovki%' AND o.Tag_ID=sh.TagId
+													JOIN Minuta m ON m.VarName LIKE '%T_Futerovki%' AND m.VarName=o.TagName
+											where	
+													sh.HH in (Select DATEPART(hh, DATEADD(hh,-1,GETDATE())))
+															AND DATEPART(MINUTE, sh.[DateTime])=0
+															AND FORMAT(sh.[DateTime], 'yyyy-MM-dd') between FORMAT(DATEADD(dd,-1,GETDATE()), 'yyyy-MM-dd') and FORMAT(GETDATE(), 'yyyy-MM-dd')
+											group BY o.TagComment
 											ORDER BY o.TagComment";
 
 			var result = new Dictionary<string, List<Sensor>>();

@@ -15,6 +15,7 @@ export class SensorErrorHandler {
 
 	/////////////////////////////// HANDLE
 	static async handle(context) {
+
 		try { this.dbErrors = await this.db.loadErrorsAsync() }
 		catch (error) { console.error(error) }
 
@@ -23,6 +24,7 @@ export class SensorErrorHandler {
 		const today1day = dates[0]
 
 		this.initialContext = basicPoyasa
+		debugger
 		this.yestContext = devideData(context[today1day])
 		this.newContext = devideData(context[today])
 
@@ -81,7 +83,7 @@ export class SensorErrorHandler {
 
 	//////////////////////////// SENSOR FAILURE
 	// not abs(todayT-yestT) because todayT might be below yestT
-	static sensorFailure = (todayT, yestT, initialT) => todayT === 0 || todayT - yestT > 100 || todayT > initialT * 2
+	static sensorFailure = (todayT, yestT, initialT) => todayT === 0 || todayT - yestT > 100 || todayT > 1150 || todayT < initialT * 0.5
 
 
 
@@ -100,7 +102,7 @@ export class SensorErrorHandler {
 		this.newContext.errors[poyas][luch][radius] = error//.toString()
 	}
 
-
+	debugger
 	////////////////////////////// FIND VALID SENSOR
 	static findValidSensor(poyas, luch, radius) {		// find a valid sensor
 

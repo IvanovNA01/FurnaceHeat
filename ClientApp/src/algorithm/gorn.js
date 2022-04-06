@@ -114,7 +114,7 @@ export const gorn = (basicPoyasa, poyasa) => {
 
 					!skipPoint && result[poyas][luch].push(point);
 				}
-
+				///// ВЫЧИСЛЕНИЯ РЕАЛЬНОГО РАДИУСА1150
 				r = r <= basicR1150
 					? 0.99999 * r
 					: r >= rKeram80
