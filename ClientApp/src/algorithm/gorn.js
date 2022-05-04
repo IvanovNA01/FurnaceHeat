@@ -149,6 +149,8 @@ export const gorn = (basicPoyasa, poyasa) => {
 				lackingPoints = [{ dR: Round(r), dT: 300 }, ...lackingPoints]
 				result[poyas][luch].push(...lackingPoints)
 			}
+
+
 		}
 	}
 
