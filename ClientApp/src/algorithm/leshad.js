@@ -62,7 +62,7 @@ const rightSide = (poyasa, luch) => {
 			if (Abs(t - 300) < 0.05 || Abs(t - 500) < 0.05 || Abs(t - 800) < 0.05 || Abs(t - 1150) < 0.05) {
 				if (!result.vysoty[radius])
 					result.vysoty[radius] = [];
-
+				// доделка для большей плавности
 				const point = Round(t) === 800
 					? ({ dT: Round(t), dH: Round(h * 0.97) })
 					: ({ dT: Round(t), dH: Round(h) })
@@ -74,7 +74,7 @@ const rightSide = (poyasa, luch) => {
 			t += dt;
 		}
 	})
-
+	//сглаживание
 	result.vysoty["1668"] = []
 	result.vysoty["3518"] = []
 	result.vysoty["0"].forEach(pt => {

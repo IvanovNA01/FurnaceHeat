@@ -88,7 +88,7 @@ export const gorn = (basicPoyasa, poyasa) => {
 					if (poyas < 6) {
 						if (point.dT < 310) {
 							switch (poyas) {
-								case 3: point.dR -= 2000; break
+								case 3: point.dR -= 2000; break // подгонка изотерм ниже  6 пояса
 								case 4: luch >= 1 && luch <= 8
 									? point.dR -= 800
 									: point.dR -= 500; break
